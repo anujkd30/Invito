@@ -18,10 +18,12 @@ public class categories extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_categories);
-
+        rec=(Button)findViewById(R.id.button10);
         wed=(Button)findViewById(R.id.button11);
+        part=(Button)findViewById(R.id.button8);
         birth=(Button)findViewById(R.id.button7);
-
+        others=(Button)findViewById(R.id.button1);
+        ani=(Button)findViewById(R.id.button9);
         birth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,8 +31,7 @@ public class categories extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
-      wed.setOnClickListener(new View.OnClickListener() {
+        wed.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View v) {
               Intent i=new Intent(getApplicationContext(),Wedding.class);
@@ -38,6 +39,41 @@ public class categories extends AppCompatActivity {
           }
       });
 
-}
+         ani.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getApplicationContext(),Anniversary.class);
+                startActivity(i);
+            }
+        });
+
+        rec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getApplicationContext(),Reception.class);
+                startActivity(i);
+            }
+        });
+
+        part.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getApplicationContext(),Party.class);
+                startActivity(i);
+            }
+        });
+
+
+
+        others.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getApplicationContext(),Other.class);
+                startActivity(i);
+            }
+        });
+
+
+    }
 
 }

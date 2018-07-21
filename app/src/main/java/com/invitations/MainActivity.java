@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 try{
                     sleep(2500);
-                    Intent i=new Intent(getApplicationContext(),Welcome_Page.class);
+                    Intent i=new Intent(getApplicationContext(),Wel_come.class);
                     startActivity(i);
                     finish();
                 }
